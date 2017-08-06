@@ -19,7 +19,7 @@
         <hr/>
         <h3 align='center'>professional</h3>
         <div class='footer'>
-            this button <button id="counter">click me</button>has been clicked <span id="count">0</span>times
+            this button <button id="counter">click me</button>has been clicked <span id="count">0</span> times
         </div>
          <script>
             /*var elem =document.getElementById('main-text');
@@ -33,6 +33,12 @@
              var interval = setInterval(moveright,50);
             };
             */
+            var button=document.getElementById('counter');
+            button.onclick = function() {
+              counter = counter + 1;
+              var span = document.getElementById('count');
+              span.innerHTML  =  counter.toString();
+            };
          </script>
     </body>
 </html>
