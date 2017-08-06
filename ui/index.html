@@ -14,9 +14,13 @@
          <script>
             var elem =document.getElementById('main-text');
             elem.innerHTML="new value";
-            var i=document.getElementById('madi');
+             var i=document.getElementById('madi');
+             var marginLeft=0;
+            function moveright() {
+                marginLeft = marginLeft + 10;
+                i.style.marginLeft = marginLeft + 'px';            }
             i.onclick=function() {
-                i.style.marginleft='100px';
+             var interval = setInterval(moveright,100);
             };
          </script>
     </body>
