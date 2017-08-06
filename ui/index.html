@@ -22,14 +22,29 @@
             this button <button id='counter'>click me</button>has been clicked <span id='count'>0</span> times
         </div>
         <br>
+        <div class='container'>
         <input type="text" id="name" placeholder="name">
-        <input type="submit"  value="submit">
-        <ul>
+        <input type="submit" id='submit_btn' value="submit">
+        <ul id='namelist'>
             <li>name1</li>
             <li>name2</li>
-            <li>name3></li>
+            <li>name3</li>
             </ul>
+        </div>
          <script>
+         var input=document.getElementById('name');
+         var name=input.value;
+         var submit = document.getElementById('submit_btn');
+         submit.onclick = function() {
+             var names = ['name1','name2','name3'];
+             var list = '';
+             for(var i=0;i<names.length;i++) {
+                 list='<li>' + names[i] + '</li>';
+             }
+             var ul = document.getElementById('namelist');
+             ul.innerHTML=list;
+         }
+         
             /*var elem =document.getElementById('main-text');
             elem.innerHTML="new value";
              var i=document.getElementById('madi');
